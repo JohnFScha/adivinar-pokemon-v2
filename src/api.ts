@@ -10,7 +10,7 @@ export const POKEMON = [
   "squirtle",
   "wartortle",
   "blastoise",
-/*   "caterpie",
+  "caterpie",
   "metapod",
   "butterfree",
   "weedle",
@@ -809,7 +809,7 @@ export const POKEMON = [
   "blacephalon",
   "zeraora",
   "meltan",
-  "melmetal", */
+  "melmetal",
 ];
 
 export default {
