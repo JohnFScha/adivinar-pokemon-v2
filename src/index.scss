@@ -68,18 +68,22 @@ main {
   main {
     background-size: cover;
     padding: 10px;
+
     h1 {
       font-size: 20px;
+      text-align: center;
     }
 
     form {
       flex-direction: column;
+      min-width: 80vw;
+
     }
 
     article.nes-container#audio {
       position: relative;
       bottom: 0;
-      min-height: auto; 
+      min-height: auto;
     }
   }
 }
