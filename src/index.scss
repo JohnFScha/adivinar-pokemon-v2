@@ -1,0 +1,85 @@
+// index.scss
+@import url('../node_modules/nes.css/css/nes.css');
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 100vh;
+  background-image: url('/backdrop.jpg');
+  background-position: center;
+  background-size: contain;
+
+  article.nes-container#audio {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 1rem;
+    right: 0.5rem;
+    top: 0.5rem;
+    background-color: hwb(0 100% 0% / 0.66);
+
+    div#controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+      background-color: transparent;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hwb(0 100% 0% / 0.66);
+
+    img.inactive {
+      image-rendering: pixelated;
+      filter: brightness(0%);
+      min-width: 50%;
+      pointer-events: none;
+    }
+
+    img.active {
+      filter: none;
+      min-width: 50%;
+    }
+
+    form {
+      display: flex;
+      gap: 0.5rem;
+      width: 50vw;
+
+      input {
+        background-color: transparent;
+
+        &::placeholder {
+          color: rgb(50, 50, 50);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    background-size: cover;
+    padding: 10px;
+    h1 {
+      font-size: 20px;
+    }
+
+    form {
+      flex-direction: column;
+    }
+
+    article.nes-container#audio {
+      position: relative;
+      bottom: 0;
+      min-height: auto; 
+    }
+  }
+}
